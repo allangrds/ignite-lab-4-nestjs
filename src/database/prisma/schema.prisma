@@ -2,7 +2,8 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "darwin-arm64", "linux-musl", "linux-arm64-openssl-1.1.x"]
 }
 
 datasource db {
@@ -20,4 +21,5 @@ model Notification {
   updatedAt   DateTime  @default(now())
 
   @@index([recipientId])
+  @@map("notifications")
 }

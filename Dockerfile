@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 node:18 As development
+FROM node:18.13.0 As development
 
 # Required for Prisma Client to work in container
 RUN apt-get update && apt-get install -y openssl
@@ -11,6 +11,6 @@ RUN npm ci
 
 COPY --chown=node:node . .
 
-RUN npm run prisma:generate
+# RUN npm run prisma:generate
 
 USER node
