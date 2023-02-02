@@ -19,11 +19,17 @@ up:
 up-silent:
 	@docker-compose up -d
 
+up-rebuild:
+	@docker-compose up -V --build
+
 bash:
-	@docker exec -it api /bin/bash
+	@docker exec -it api /bin/ash
 
 prisma_format_schema:
 	npx prisma format
 
 prisma_studio:
 	npx prisma studio
+
+prisma_migrate:
+	npx prisma migrate dev
