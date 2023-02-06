@@ -19,11 +19,12 @@
     "noFallthroughCasesInSwitch": false,
     "strict": true,
     "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
     "paths": {
       "@app/*": ["./src/app/*"],
       "@infra/*": ["./src/infra/*"],
       "@helpers/*": ["./src/helpers/*"],
-      "@test/*": ["./test/*"],
+      "@test/*": ["./test/*"]
     }
   }
 }
